@@ -22,7 +22,7 @@ class RoomType(AbstractItem):
     pass
 
 
-class Rooms(models.Model):
+class Room(models.Model):
 
     """Room Model Definition"""
 

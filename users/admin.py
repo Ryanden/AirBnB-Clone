@@ -5,6 +5,17 @@ from . import models
 
 @admin.register(models.User)
 class CustomUserAmdin(UserAdmin):
+
+    list_display = (
+        "username",
+        "gender",
+        "language",
+        "currency",
+    )
+    list_filter = (
+        "superhost",
+        "gender",
+    )
     fieldsets = UserAdmin.fieldsets + (
         (
             "Custom Profile",
