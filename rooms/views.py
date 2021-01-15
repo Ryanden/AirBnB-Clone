@@ -1,12 +1,12 @@
-from django.shortcuts import render
-from rooms.models import Room
+from django.views.generic import ListView
+from . import models
 
 
-def all_rooms(request):
+class RoomView(ListView):
+    """ RoomView Definition """
 
-    all_rooms = Room.objects.all()[:5]
-
-    context = {"rooms": all_rooms}
-
-    return render(request, "rooms/rooms.html", context)
+    model = models.Room
+    paginate_by = 10
+    paginate_orphans = 5
+    ordering = "pk"
 
