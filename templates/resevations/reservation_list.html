@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page_name %}
+Reservation List
+{% endblock page_name %}
+
+{% block content %}
+
+<h3>
+    This is Reservation List Page
+</h3>
+
+<div>
+    <h2>Reservation List</h2>
+    {% for reservation in object_list %}
+    <li>{{reservation.status}}</li>
+    {% endfor %}
+</div>
+
+{% endblock content %}
