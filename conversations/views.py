@@ -1,12 +1,12 @@
-from django.shortcuts import render
-from conversations.models import Conversation
+from django.views.generic import ListView
+from . import models
 
 
-def all_conversations(request):
+class MessageView(ListView):
+    """ MessageView Definition """
 
-    all_conversations = Conversation.objects.all()[:5]
-
-    context = {"conversations": all_conversations}
-
-    return render(request, "conversations/all_conversations.html", context)
+    model = models.Message
+    paginate_by = 10
+    paginate_orphans = 5
+    ordering = "pk"
 

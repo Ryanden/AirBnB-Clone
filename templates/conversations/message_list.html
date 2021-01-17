@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page_name %}
+Mesaage List
+{% endblock page_name %}
+
+{% block content %}
+
+<h3>
+    This is Mesaage List Page
+</h3>
+
+<div>
+    <h2>Mesaage List</h2>
+    {% for message in object_list %}
+    <li>{{message.message}}</li>
+    {% endfor %}
+</div>
+
+{% endblock content %}

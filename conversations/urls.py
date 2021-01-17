@@ -1,7 +1,7 @@
 from django.urls import path
-from conversations import views as conversation_views
+from conversations import views as message_views
 
-app_name = "conversations"
+app_name = "message"
 
-urlpatterns = [path("", conversation_views.all_conversations, name="conversations")]
+urlpatterns = [path("", message_views.MessageView.as_view(), name="message")]
 
