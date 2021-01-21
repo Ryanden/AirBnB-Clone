@@ -1,20 +1,14 @@
+<a href="{% url 'core:home' %}">Home</a>
 <header>
     <ul>
+        {% if user.is_authenticated %}
         <li>
-            <a href="{% url 'core:home' %}">Home</a>
+            <a href="{% url 'users:logout' %}">LOG_OUT</a>
         </li>
-
+        {% else %}
         <li>
             <a href="{% url 'users:login' %}">Login</a>
         </li>
-
-        <li>
-            <a href="/reviews">reviews</a>
-        </li>
-
-        <li>
-            <a href="/users">users</a>
-        </li>
+        {% endif %}
     </ul>
-
 </header>
