@@ -62,6 +62,8 @@ class RoomAdmin(admin.ModelAdmin):
         "count_photos",
     )
 
+    ordering = ("name", "price")
+
     list_filter = (
         "instant_book",
         "host__superhost",

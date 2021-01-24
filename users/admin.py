@@ -8,14 +8,17 @@ class CustomUserAmdin(UserAdmin):
 
     list_display = (
         "username",
-        "gender",
+        "first_name",
+        "last_name",
+        "email",
+        "is_active",
         "language",
         "currency",
-    )
-    list_filter = (
         "superhost",
-        "gender",
+        "is_staff",
+        "is_superuser",
     )
+    list_filter = UserAdmin.list_filter + ("superhost")
     fieldsets = UserAdmin.fieldsets + (
         (
             "Custom Profile",
@@ -23,6 +26,7 @@ class CustomUserAmdin(UserAdmin):
                 "fields": (
                     "avatar",
                     "gender",
+                    "bio",
                     "birthdate",
                     "language",
                     "currency",
