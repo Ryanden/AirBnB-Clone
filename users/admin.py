@@ -18,7 +18,7 @@ class CustomUserAmdin(UserAdmin):
         "is_staff",
         "is_superuser",
     )
-    list_filter = UserAdmin.list_filter + ("superhost")
+    list_filter = UserAdmin.list_filter + ("superhost",)
     fieldsets = UserAdmin.fieldsets + (
         (
             "Custom Profile",

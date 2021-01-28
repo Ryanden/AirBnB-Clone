@@ -7,4 +7,4 @@ class ListAdmin(admin.ModelAdmin):
 
     list_display = ("name", "user", "count_rooms")
 
-    search_fields = "name"
+    search_fields = ("name",)
