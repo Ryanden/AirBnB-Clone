@@ -17,7 +17,8 @@ class ItemAdmin(admin.ModelAdmin):
 
 
 class PhotoInline(admin.TabularInline):
-
+    """ Room Admin has another small admin """
+    """ PhotoInline Definition """
     model = models.Photo
 
 
