@@ -82,6 +82,10 @@ class Room(models.Model):
     facilities = models.ManyToManyField("Facility", blank=True)
     house_rules = models.ManyToManyField("HouseRule", blank=True)
 
+    # save
+    def save(self, *args, **kwargs):
+        pass
+
     def __str__(self):
         return self.name
 
