@@ -82,7 +82,8 @@ class Room(models.Model):
     facilities = models.ManyToManyField("Facility", blank=True)
     house_rules = models.ManyToManyField("HouseRule", blank=True)
 
-    # save #8.8 Exq
+    # save #8.8
+    # #9.0 Custom Command and Seeding
     def save(self, *args, **kwargs):
         pass
 
