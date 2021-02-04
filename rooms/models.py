@@ -84,6 +84,10 @@ class Room(models.Model):
 
     # save #8.8
     # #9.0 Custom Command and Seeding
+    # import re
+    # re.search()
+    # re.match()
+    # re.red
     def save(self, *args, **kwargs):
         pass
 
