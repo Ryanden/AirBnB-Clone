@@ -88,6 +88,7 @@ class Room(models.Model):
     # re.search()
     # re.match()
     # re.red
+    # Use Tailwind Css Component 02-07
     # (.*?) get data inside curry bracket
     def save(self, *args, **kwargs):
         pass
